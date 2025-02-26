@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <script src="./notifications.js" defer></script>
+    <title>Todo</title>
+  </head>
+  <body>
+    <section class="todo">
+      <h2>To-do list</h2>
+      <div class="input">
+        <input
+          type="text"
+          class="input-field"
+          id="todoInput"
+          placeholder="Add a new task"
+        />
+        <!-- New Start Time Input -->
+        <input
+          type="time"
+          class="input-time"
+          id="startTimeInput"
+          placeholder="Start Time"
+        />
+        <!-- New End Time Input -->
+        <input
+          type="time"
+          class="input-time"
+          id="endTimeInput"
+          placeholder="End Time"
+        />
+        <button class="btn">Add</button>
+      </div>
+      <div class="filter">
+        <button id="filterButton" class="btn">Filter</button>
+        <select id="filterOptions" class="input-field" style="display: none;">
+          <option value="name">Task Name (A-Z)</option>
+          <option value="startTime">Start Time</option>
+          <option value="endTime">End Time</option>
+        </select>
+      </div>
+      <ul class="scroll">
+        <li id="todoList"></li>
+      </ul>
+      <div>
+        <hr class="counter" />
+        <div class="counter-container">
+          <p><span id="todoCount">0</span> items total</p>
+          <button id="deleteButton">Delete All</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <p class="made-by">Made By</p>
+        <p class="author">Jyesht</p>
+      </div>
+    </footer>
+  </body>
+</html>
